@@ -1,0 +1,96 @@
+Employees.java
+
+package com.opteamix.examples;
+
+import java.util.Scanner;
+
+public class Employee {
+	
+	
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);	
+		for(int i=1; i<=3 ; i++) {
+			System.out.println("Enter Name: ");
+			String name = scanner.next();
+			System.out.println("Enter Salary: ");
+			double salary = scanner.nextDouble();
+			System.out.println("Enter the Grade: ");
+			String grade = scanner.next();
+			System.out.println("Enter the date: ");
+			String date = scanner.next();
+			User user = new User(name,salary,grade,date);
+			System.out.println(user.empId+" "+user.getName()+" "+user.getSalary()+" "+user.getGrade()+" "+user.getDate());
+		}
+		
+		
+		
+	
+		
+	}
+}
+
+
+
+-------------------------------------------------------------------------------------------
+User.java
+
+package com.opteamix.examples;
+
+public class User {
+	String name;
+	double salary;
+	String grade;
+	String date;
+	static int id = 100;
+	int empId;
+	
+	
+	
+	
+	{
+		empId = id++;
+	}
+	public User(String name, double salary, String grade, String date) {
+		super();
+		
+		this.name = name;
+		this.salary = salary;
+		this.grade = grade;
+		this.date = date;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	
+}
