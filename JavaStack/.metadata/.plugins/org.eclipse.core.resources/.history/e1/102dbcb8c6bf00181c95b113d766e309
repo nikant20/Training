@@ -1,0 +1,5 @@
+package com.opteamix.webservices;
+
+public class MyResource {
+
+}

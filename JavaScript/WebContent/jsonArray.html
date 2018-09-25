@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Json Array</title>
+<script type="text/javascript">
+	employees=[{"empid":101,"name":"Nikant","emails":["abc@xyz.com","xyz@abc.com"]},
+		       {"empid":102,"name":"Prabhudeep","emails":["abc@xyz.com","xyz@abc.com"]},
+		       {"empid":103,"name":"Amulya","emails":["abc@xyz.com","xyz@abc.com"]}];
+	function display(){
+		var data="";
+		for(var i=0;i<employees.length;i++){
+			for(var j in employees[i]) {
+		        data= data+employees[i][j]+"<br>"; 
+		    }
+		}
+			document.getElementById("div1").innerHTML=data;		
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="Display Data" onclick="display()">
+	<div id="div1" style="font-size: 150%, color: green"></div>
+	<div id="div2" style="font-size: 150%, color: green"></div>
+	<div id="div3" style="font-size: 150%, color: green"></div>
+</body>
+</html>

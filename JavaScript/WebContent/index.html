@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript Demo</title>
+	<script type="text/javascript">
+		var a = 10;
+		console.log(a);
+		a = "Hello";
+		console.log(a);
+		var num1 = 10;
+		var num2 = 20;
+		var sum = num1+num2;
+		console.log("Sum is:"+sum);
+		
+		document.write("<h1>Hello World</h1>");
+		var arr1=[];
+		var arr2=["Nikant","Prabhudeep","Amulya",40];
+		for(var i=0; i < arr2.length; i++){
+			console.log(arr2[i]);
+		}
+		displayNames(arr2);
+		arr2[5] = "Mayuri";
+		displayNames(arr2);
+		arr2.push("Roma");
+		document.write("<br>After push</br>");
+		displayNames(arr2);
+		
+		function displayNames(names){
+			/* for(var i=0; i < names.length; i++){
+				console.log(names[i]);
+			} */
+			
+			for(var i in names){
+				console.log(names[i]);
+				document.write(names[i]+"<br>");
+				}
+		}
+	</script>
+</head>
+<body>
+	<h1>Hello World!</h1>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Manipulations</title>
+<script type="text/javascript">
+	function add() {
+		var headingNode = document.createElement("h1");//Step 1 creating heading node
+		var txtNode = document.createTextNode("i am heading");//step 2 creating text node
+		headingNode.appendChild(txtNode);//Step 3 linkning heading node to text node
+		var bodyNode = document.getElementsByTagName("body");
+		bodyNode[0].appendChild(headingNode);//step 4 linking of head node to body Node
+	}
+	function remove() {
+		var hNode = document.getElementsByTagName("h1")[0];
+		var bodyNode = document.getElementsByTagName("body");
+		bodyNode[0].removeChild(hNode);
+	}
+	function move(direction) {
+		var pNode = document.getElementById("p1");
+		pNode.setAttribute("align",direction);
+	}
+	
+</script>
+</head>
+<body>
+	<input type="button" value="Add" onclick="add();" >
+	<input type="button" value="Remove" onclick="remove();" >
+	<p id="p1" style="color:blue; font-size:150%" align="left">Hello World</p>
+	<input type="button" value="left" onclick="move('left')">
+	<input type="button" value="center" onclick="move('center')">
+	<input type="button" value="right" onclick="move('right')">
+   
+	
+</body>
+</html>

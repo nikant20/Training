@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function startTimer(){
+		setTimeout(f1,5000);
+		alert("Timer initialized at "+new Date());
+	}
+	function f1(){
+		document.getElementById("div1").innerHTML = "Function invoked @"+new Date();
+		window.close();
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="start timer" onclick="startTimer()">
+	<div id="div1" style="color:green";font-size:200%></div>
+</body>
+</html>

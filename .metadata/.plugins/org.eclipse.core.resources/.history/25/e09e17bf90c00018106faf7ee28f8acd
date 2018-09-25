@@ -1,0 +1,6 @@
+package com.opteamix;
+
+public class Customer {
+	private int Customerid;
+	private String customerName;
+}

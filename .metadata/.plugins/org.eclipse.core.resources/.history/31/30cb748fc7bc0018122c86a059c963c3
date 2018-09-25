@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>This is an Index Page</h2>
+	<form action="UserReaderServlet" method="post">
+		<label>Enter Username: </label><input type="text" name="un"><br>
+		<label>Enter Age:</label><input type="text" name="age"><br>
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>

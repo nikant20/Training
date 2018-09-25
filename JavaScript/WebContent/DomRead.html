@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function getData(){
+		/* var node = document.getElementById("username");
+		var name = node.value;
+		alert("Hello "+name); */
+		//console.log("Hello "+document.getElementById("username").value);
+		//can read by tag name, it returns array of node
+		/* var nodeArr = document.getElementsByTagName("input");
+		alert("Hello "+nodeArr[0].value); */
+		
+		
+		var v = document.getElementsByTagName("input")[0];
+		var divNode = document.getElementById("targetDiv");
+		divNode.innerHTML ="I am "+v.value;
+		//alert(v.value);
+		
+	}
+</script>
+</head>
+<body>
+	Enter Name: <input id="username" type="text" onkeyup="getData()">
+	<div style="color:cyan;font-size: 150%;font-family: cursive" id="targetDiv">
+	    I am Nikant
+	</div>
+</body>
+</html>

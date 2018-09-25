@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Image Change Demo</title>
+<script type="text/javascript">
+	var img = ["Logo-white.png","logo.png","rpa.jpg"];
+	var i = 0;
+	var getImage;
+	function changeImage(image) {
+		getImage= document.getElementById("image");
+		
+		if(image=='increase'){
+			getImage.setAttribute("src",img[++i]);
+		}else{
+			var i = img.length-1;
+			getImage.setAttribute("src",img[--i]);
+		}
+		
+	}
+
+</script>
+</head>
+<body>
+<img src="logo.png" id ="image">
+<input type="button" value="Change Image" onclick="changeImage('increase')">
+<input type="button" value="Back To original" onclick="changeImage('decrease'')">
+</body>
+</html>

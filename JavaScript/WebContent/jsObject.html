@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function addEmp() {
+		emp = new Object();
+		emp.id = document.getElementById("id").value;
+		emp.name = document.getElementById("name").value;
+		emp.address = document.getElementById("address").value;
+		emp.getEmpData = function(){
+			return emp.name+"("+emp.id+") is living in " + emp.address;
+		}
+		alert("Object Created ..");
+	}
+	function display() {
+		//var data = emp.name+" is living in "+emp.address;
+		document.getElementById("div1").innerHTML=emp.getEmpData();
+	}
+
+</script>
+</head>
+<body>
+	Email Id:<input type="text" id="id"><br>
+	Emp Name:<input type="email" id="name"><br>
+	Emp Address:<input type="text" id="address"><br>
+	<div id = "div1" style="color: blue; font-size:150%">
+	<input type="button" value="Add Emp", onclick="addEmp()">
+	<input type="button" value="Display", onclick="display()">
+	</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<form action="StoreServlet">
+	<h2>Welcome to User</h2>
+	<label>UserName: </label><input type="text" name="userName"><br>
+	<label>Password: </label><input type="password" name="password"><br>
+	<label>Gender</label><input type="radio" value="Male" name="gender">
+	<input type="radio" value="Female" name="gender"><br>
+	<label>Phone: </label> <input type="text" name="phoneNumber"><br>
+	<input type="submit" value="Register"><input type="reset" value="Reset">
+	</form>
+</body>
+</html>

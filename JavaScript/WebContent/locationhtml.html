@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	navigator.geolocation.getCurrentPosition(f1);
+	
+	function f1(position){
+		
+		var lat = position.coords.latitude;
+		var long = position.coords.longitude;
+		
+		var mapUrl = "http://maps.googleapis.com/maps/api/staticmap?center= "+lat+","+long+"&zoom=20&size=600x600";
+		document.getElementById("displayPosition").innerHTML = "Latitude: "+lat+" and Longitude is "+long;
+		var img = document.createElement('img');
+		
+		img.setAttribute("src",mapUrl);
+		document.getElementById("body").appendChild(img);
+	}
+	
+	
+
+</script>
+</head>
+<body>
+
+<div id="displayPosition" style="color: blue; font-size: 150%">
+   Hello
+</div>
+<div id="body">
+
+</div>
+
+</body>
+</html>

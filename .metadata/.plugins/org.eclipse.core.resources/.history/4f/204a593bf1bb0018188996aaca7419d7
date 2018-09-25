@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JSP Demo</title>
+</head>
+<body>
+	<h2>This is Home Page</h2>
+	
+	<a href="FormReaderServlet">Call Form Reader</a>
+	<form action="FormReaderServlet" method="post"></form>
+</body>
+</html>

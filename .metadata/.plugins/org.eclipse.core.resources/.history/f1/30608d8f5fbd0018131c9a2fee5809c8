@@ -1,0 +1,5 @@
+package com.opteamix.dao;
+
+public class UserProfileDAO {
+
+}

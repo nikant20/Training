@@ -1,0 +1,13 @@
+package com.opteamix;
+
+public class Aadhar implements ID{
+	
+	private long aadharNo= 987634567864;
+	private String name = "Nikant";
+	@Override
+	public void display() {
+		
+		
+	}
+
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<bean id="telco1" class="com.opteamix.TelecomServices">
+	<property name="serviceName">
+		<value>Jio</value>
+	</property>
+	
+	<property name="locations">
+		<list>
+			<value>BLR</value>
+			<value>KOTA</value>
+			<value>LDH</value>
+			<value>PNBE</value>
+		</list>
+	</property>
+	<property name="urls">
+		<set>
+			<value>www.jio.com</value>
+			<value>www.jio.com/plans</value>
+			<value>www.jio.com/plans/30days</value>
+		</set>
+	</property>
+	
+	
+	</bean>
+	
+	<bean id="book" class="com.opteamix.Book">
+		<constructor-arg index="0" value="JAVA-8-WP"></constructor-arg>
+		<property name="title" value="Java"></property>
+		<property name="author" value="Durga"></property>
+		<property name="price" value="5000"></property>
+	</bean>
+
+	
+
+</beans>

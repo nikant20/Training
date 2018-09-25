@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function createJsonObject() {
+		weather={"city":"Banglore","MaxTemp":25,"MinTemp":17,"description":"Drizzile"};
+	}
+	let url = 'http://api.openweathermap.org/data/2.5/weather?q=bangalore&APPID=d66f970b4a0ba9b7ab4b6fd4780f55b9';
+;
+	function readJsonObject() {
+		
+
+		fetch(url)
+		.then(res => res.json())
+		.then((out) => {
+			var data="";
+			for(key in out){
+				data = data+key+":"+out[key]+"<br>";
+			}
+			document.getElementById("div1").innerHTML=data;
+		})
+		.catch(err => { throw err });
+	/* 	var data = "In "+weather.city + " Min Temp is "+weather.MinTemp+" and Max Temp is "+weather.MaxTemp+" Description: "+weather.description;
+		document.getElementById("div1").innerHTML=data;  */
+	}
+	function iterateJsonObject() {
+		var data="";
+		for(key in weather){
+			data = data+key+":"+weather[key]+"<br>";
+		}
+		document.getElementById("div1").innerHTML=data;
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="create" onclick="createJsonObject()">
+	<input type="button" value="read" onclick="readJsonObject()">
+	<input type="button" value="read" onclick="iterateJsonObject()">
+	<div id="div1" style="color: aqua; font-size: 200%">
+		
+	</div>
+</body>
+</html>

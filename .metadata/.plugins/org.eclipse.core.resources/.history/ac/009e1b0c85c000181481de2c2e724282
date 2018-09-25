@@ -1,0 +1,11 @@
+package com.opteamix;
+
+public class PAN implements ID {
+
+	@Override
+	public void display() {
+		
+
+	}
+
+}

@@ -1,0 +1,62 @@
+body {
+	background-color: aqua;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+#header{
+	background-color: black;
+	height: 50px;
+	border-radius: 10px;
+	padding: 15px;
+}
+#logo{
+	float:right;
+}
+#mainimage{
+	border-radius: 10px;
+}
+#menu{
+	float: left;
+	list-style: none;
+}
+li{
+	float:left;
+	padding-right: 50px;
+}
+a{
+	text-decoration: none;
+	color:white;
+	font-style: normal;
+	font-family: monospace;
+	font-size: 150%;
+}
+li:hover {
+	background-color: red;
+	text-decoration: overline;
+	font-size: 130%;
+	border-radius: 10px;
+}
+#mainsection{
+	text-align: center;
+	height: 500px;
+	margin-top: 10px;
+}
+#leftimage{
+	float: left;
+	width:50%;
+	text-align: center;
+	height: 380px;
+	border-style: dotted;
+	
+}
+#rightimage{
+	float: right;
+	width:50%;
+	text-align: center;
+	height: 200px;
+}
+#footer{
+	text-align: center;
+	font-family:  normal;
+	font-style: oblique;
+}
