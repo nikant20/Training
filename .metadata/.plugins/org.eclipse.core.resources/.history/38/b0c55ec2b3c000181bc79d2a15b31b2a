@@ -11,19 +11,4 @@ public class Person {
 	private String name;
 	@Autowired
 	private Contacts contacts;
-	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Contacts getContacts() {
-		return contacts;
-	}
-	public void setContacts(Contacts contacts) {
-		this.contacts = contacts;
-	}
-	
-	
 }
