@@ -10,14 +10,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.opteamix.beans.Employee;
 
-@Repository
+@Repository //To get connected an create objects automatically
 public class EmployeeDao implements EmployeeOperations {
 	
-	@Autowired
+	@Autowired //
 	private HibernateTemplate hibernateTemplate;
 
 	@Override
-	@Transactional
+	@Transactional //This is used to do transaction with DML commands
 	public String store(Employee emp) {
 		String status = null;
 		if(emp!=null) {

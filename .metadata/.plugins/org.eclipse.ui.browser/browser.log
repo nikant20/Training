@@ -375,3 +375,6 @@ Sep 27, 2018 09:47:16.19 [16864:11392:0927/094716.195:ERROR:ssl_client_socket_im
 Sep 27, 2018 09:47:16.20 [16864:11392:0927/094716.198:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
 Sep 27, 2018 09:47:21.91 [16864:11392:0927/094721.912:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
 Sep 27, 2018 09:47:22.22 [16864:11392:0927/094722.226:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+
+Sep 27, 2018 10:04:49.70 NEW SESSION
+Sep 27, 2018 10:04:49.70 [6744:17804:0927/100449.704:ERROR:install_util.cc(629)] Failed to read HKLM\SOFTWARE\Policies\Google\Chrome\MachineLevelUserCloudPolicyEnrollmentToken: The system cannot find the file specified. (0x2)

@@ -16,10 +16,10 @@ import com.opteamix.beans.Employee;
 import com.opteamix.dao.EmployeeDao;
 import com.opteamix.dao.EmployeeOperations;
 
-@Controller
+@Controller //To  link this controller
 public class ApplicationController {
 	
-	@Autowired
+	@Autowired //To create object of EmployeeDao class automatically as EmployeeDao is implementing EmployeeOperations class
 	private EmployeeOperations employeeOperations;
 	
 	@RequestMapping(value="/check", method = RequestMethod.GET)
@@ -50,6 +50,7 @@ public class ApplicationController {
 	
 	@RequestMapping(value="/store", method=RequestMethod.POST)
 	public ModelAndView registerEmployee(@ModelAttribute("employee") Employee emp) {
+		//ModelAttribute extracts the value
 		String status = null;
 		if(emp == null) {
 			status = "Sorry, can't be stored";
