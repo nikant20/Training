@@ -4,7 +4,6 @@ INDEX VERSION 1.4+C:\Users\NChaudhary\Desktop\EclipseWorkSpace\.metadata\.plugin
 3904868208.index
 3841620141.index
 3771230869.index
-3692690113.index
 879304602.index
 338254127.index
 4238537671.index
