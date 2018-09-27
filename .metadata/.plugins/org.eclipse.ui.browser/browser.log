@@ -329,3 +329,49 @@ Sep 24, 2018 17:39:40.14 [12104:1804:0924/173940.149:ERROR:ssl_client_socket_imp
 Sep 24, 2018 17:39:40.15 [12104:1804:0924/173940.150:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -100
 Sep 24, 2018 17:39:43.90 [12104:1804:0924/173943.904:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -100
 Sep 24, 2018 17:39:44.21 [12104:1804:0924/173944.219:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -100
+
+Sep 26, 2018 14:50:35.98 NEW SESSION
+Sep 26, 2018 14:50:35.98 [1284:18128:0926/145035.984:ERROR:install_util.cc(629)] Failed to read HKLM\SOFTWARE\Policies\Google\Chrome\MachineLevelUserCloudPolicyEnrollmentToken: The system cannot find the file specified. (0x2)
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.122:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.20 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.21 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.21 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.21 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 14:50:36.21 [1284:18128:0926/145036.123:ERROR:in_progress_cache_impl.cc(192)] Cache is not initialized, cannot RetrieveEntry.
+Sep 26, 2018 18:09:26.15 [2424:1760:0926/180926.031:ERROR:install_util.cc(629)] Failed to read HKLM\SOFTWARE\Policies\Google\Chrome\MachineLevelUserCloudPolicyEnrollmentToken: The system cannot find the file specified. (0x2)
+Sep 26, 2018 18:26:35.67 [2424:15980:0926/182635.676:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 26, 2018 18:26:35.69 [2424:15980:0926/182635.691:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 26, 2018 18:26:35.83 [2424:15980:0926/182635.830:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 26, 2018 18:26:35.83 [2424:15980:0926/182635.830:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 26, 2018 18:26:54.82 [2424:15980:0926/182654.823:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 26, 2018 18:26:54.85 [2424:15980:0926/182654.852:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 26, 2018 18:26:54.98 [2424:15980:0926/182654.981:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 26, 2018 18:26:54.98 [2424:15980:0926/182654.983:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 26, 2018 18:27:31.93 [10244:11536:0926/182731.927:ERROR:install_util.cc(629)] Failed to read HKLM\SOFTWARE\Policies\Google\Chrome\MachineLevelUserCloudPolicyEnrollmentToken: The system cannot find the file specified. (0x2)
+Sep 26, 2018 18:28:03.66 [10632:14152:0926/182803.665:ERROR:install_util.cc(629)] Failed to read HKLM\SOFTWARE\Policies\Google\Chrome\MachineLevelUserCloudPolicyEnrollmentToken: The system cannot find the file specified. (0x2)
+
+Sep 27, 2018 09:12:59.82 NEW SESSION
+Sep 27, 2018 09:12:59.83 [16864:9336:0927/091259.710:ERROR:install_util.cc(629)] Failed to read HKLM\SOFTWARE\Policies\Google\Chrome\MachineLevelUserCloudPolicyEnrollmentToken: The system cannot find the file specified. (0x2)
+Sep 27, 2018 09:46:56.91 [16864:11392:0927/094656.917:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 27, 2018 09:46:56.92 [16864:11392:0927/094656.921:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 27, 2018 09:46:57.65 [16864:11392:0927/094657.654:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 27, 2018 09:46:57.67 [16864:11392:0927/094657.669:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 27, 2018 09:46:58.63 [16864:11392:0927/094658.628:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 27, 2018 09:46:58.63 [16864:11392:0927/094658.631:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 27, 2018 09:47:16.19 [16864:11392:0927/094716.195:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 27, 2018 09:47:16.20 [16864:11392:0927/094716.198:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 27, 2018 09:47:21.91 [16864:11392:0927/094721.912:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
+Sep 27, 2018 09:47:22.22 [16864:11392:0927/094722.226:ERROR:ssl_client_socket_impl.cc(1050)] handshake failed; returned -1, SSL error code 1, net_error -101
