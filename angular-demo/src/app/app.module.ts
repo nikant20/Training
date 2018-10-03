@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { UserItemComponent } from './user-item/user-item.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { NameFormatter, DetailFormatter } from './employee';
+import { UserComponent } from './user/user.component';
+import {FormsModule}from "@angular/forms"
 
 @NgModule({
   declarations: [
@@ -12,10 +14,11 @@ import { NameFormatter, DetailFormatter } from './employee';
     UserItemComponent,
     EmployeeComponent,
     NameFormatter,
-    DetailFormatter
+    DetailFormatter,
+    UserComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
