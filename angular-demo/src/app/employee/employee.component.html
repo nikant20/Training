@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<div>
+  <h2>{{title}}</h2>
+  <p>
+    
+      Id: {{emp.id}}<br>
+      Name: {{emp.name|formatName:emp.gender}}<br>
+      Salary: {{emp.salary|currency:'INR'}}<br>
+      Gender: {{emp.gender}}<br>
+      DOB: {{emp.dob|date:'dd-MM-yyyy'}}<br>
+  </p>
+
+  <table  class="table table-bordered table-hover table-sm">
+    <thead class="thead-dark">
+    <tr>
+      <th>EmployeeId</th>
+      <th>Name</th>
+      <th>Salary INR</th>
+      <th>Salary USD</th>
+      <th>Gender</th>
+      <th>DOB</th>
+    </tr>
+  </thead>
+    <tbody>
+    <tr *ngFor="let i of empDetails">
+      <td>{{i.id}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.salary|currency:'INR'}}</td>
+      <td>{{i.salary/73.0|currency:'USD'}}</td>
+      <td>{{i.gender|genderFormat:i.gender}}</td>
+      <td>{{i.dob|date:'yy-MM-dd'}}</td>
+    </tr>
+  </tbody>
+  </table>
+
+</div>

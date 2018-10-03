@@ -1,5 +1,0 @@
-package com.opteamix.dao;
-
-public interface UserProfileOperations {
-
-}
