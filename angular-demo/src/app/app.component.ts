@@ -9,6 +9,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular';
-
-
+  username="";
+  isHidden = false;
+  isDisabled = true;
+  callMe(value:string){
+    this.username = value;
+    this.isHidden = true;
+    console.log(value);
+    
+  }
+  validate(v:string){
+    console.log(v);
+    
+    if(v.length >= 3){
+      this.isDisabled = false;
+    }
+    else{
+      this.isDisabled = true;
+    }
+  }
 }
