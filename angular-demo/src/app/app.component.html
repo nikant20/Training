@@ -1,20 +1,35 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div >
-  <h1>
+<div class="container">
+  <h1 style="text-align: center; background: blueviolet; border-radius: 20px; padding: 10px" >
     Welcome to {{ title }}!<br>
   </h1>
- </div>
- <!-- Property Binding -->
- <div [hidden]="isHidden">Hello World</div><br>
- <!-- Event Binding -->
- <button (click)="callMe(i1.value)">Click</button>
-
-<div>
-  <input type="text" (input)="validate(i1.value)" #i1>
-  <button [disabled]="isDisabled" (click)="callMe(i1.value)" >Submit</button>
-  <hr>
-  <h2>UserName is {{username}}</h2>
+  <div>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+          <a routerLink="employee" class="nav-link" data-toggle="tab">Employee Info</a>
+      </li>
+      <li class="nav-item">
+          <a routerLink="users" class="nav-link" data-toggle="tab">Users List</a> 
+      </li>
+      <li class="nav-item">
+          <a routerLink="login" class="nav-link" data-toggle="tab">Login</a> 
+      </li>
+      <li class="nav-item">
+          <a routerLink="register" class="nav-link" data-toggle="tab">Register</a>
+      </li>
+      <li class="nav-item">
+          <a routerLink="parent" class="nav-link" data-toggle="tab">Parent</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="empAll" class="nav-link">Employees From DB </a>
+      </li>
+    </ul>
+    
+    
+  </div> 
+  <div>
+    <router-outlet></router-outlet>
+  </div>
 </div>
 
-<app-user></app-user>
+
 

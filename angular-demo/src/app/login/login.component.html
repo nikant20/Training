@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>User Login Form</h2>
+   <!-- ngSubmit is event handler and #loginForm is id and ngForm has all the data in the form -->
+  <form (ngSubmit) = "login(loginForm.value)" #loginForm="ngForm">
+    <div class="form-group">
+      <label>UserName</label>
+      <input type="text" name="user" class="form-control" #un="ngModel" [(ngModel)] = "username" maxlength="10" minlength="4" required autocomplete="off">
+      <div [hidden]= "un.valid|| un.pristine" class="alert alert-danger">Username must be valid</div>
+    </div>
+      <div class="form-group">
+        <label>Passoword</label>
+        <input type="password" name="password" class="form-control" #ps="ngModel" [(ngModel)]="password" maxlength="10" minlength="4" required>
+        <div [hidden]="ps.valid|| ps.pristine" class="alert alert-danger">Password must be Valid</div>
+      </div>
+    <div class="form-group">
+      <!-- &nbsp gives space -->
+      <input type="submit" value="login" class="btn btn-primary" [disabled]="!loginForm.valid"> &nbsp;
+      <input type="reset" value="reset" class="btn btn-outline-primary">
+    </div>
+  </form>
+</div>

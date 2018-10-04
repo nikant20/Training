@@ -1,0 +1,20 @@
+<div>
+<table  class="table table-bordered table-hover table-sm">
+    <thead class="thead-dark">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>PhoneNumber</th>
+    </tr>
+  </thead>
+    <tbody>
+    <tr *ngFor="let e of empList">
+      <td>{{e.id}}</td>
+      <td>{{e.name}}</td>
+      <td>{{e.gender}}</td>
+      <td>{{e.phoneNumber}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
