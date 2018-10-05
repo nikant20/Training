@@ -6405,3 +6405,8 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.de
 2018-10-05 09:57:24,467 [Worker-32: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-10-05 09:57:24,468 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\NChaudhary\Desktop\EclipseWorkSpace\spring-web-app\src\main\resources
 2018-10-05 09:57:24,470 [Worker-32: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-10-05 09:57:24,471 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\NChaudhary\Desktop\EclipseWorkSpace\spring-web-app\src\test\resources
+2018-10-05 09:59:00,644 [Worker-34: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-10-05 09:59:00,646 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\NChaudhary\Desktop\EclipseWorkSpace\AirlineTicketBookingApp\src\main\resources
+2018-10-05 09:59:00,648 [Worker-34: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-10-05 09:59:00,650 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\NChaudhary\Desktop\EclipseWorkSpace\AirlineTicketBookingApp\src\test\resources

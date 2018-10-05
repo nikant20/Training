@@ -1,4 +1,6 @@
+import { EmpSpringService } from './../emp-spring.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -6,18 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  firstname:string = "";
-  lastname:string="";
-  fullname:string="";
-  isDisabled = true;
-  join(v1:string, v2:string){
-     this.fullname = v1+" "+v2;
-  }
-  constructor() {
-   
+
+  id:number;
+  name:string;
+  gender:string;
+  phoneNumber:string;
+  
+  constructor(private empService: EmpSpringService, private router:Router) {
+    
    }
 
   ngOnInit() {
+  }
+  store(formValues){
+    this.empService.storeEmp(formValues).subscribe(r => console.log("Status: "+r));
+    this.router.navigate(["empAll"]);
   }
 
 }

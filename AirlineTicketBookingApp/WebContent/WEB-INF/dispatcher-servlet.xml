@@ -20,14 +20,14 @@
 
 <!--     We should have our files in WEB-INF because web-inf restricts access to files and doesn't gives direct access --> 
 	
-	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
 			<value>/WEB-INF/pages/</value>
 		</property>
 		<property name="suffix">
 			<value>.jsp</value>
 		</property>
-	</bean>
+	</bean> -->
    <!--  Add the Details Of DB -->
 	<bean id="dataSourceBean" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
         <property name="driverClassName" value="org.apache.derby.jdbc.ClientDriver"></property>  
