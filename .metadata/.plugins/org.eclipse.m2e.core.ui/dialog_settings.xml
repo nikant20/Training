@@ -55,6 +55,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="AirlineTicketBookingApp"/>
 			<item value="sprin-web-app"/>
 			<item value="spring-starter-app"/>
 			<item value="java-restful-demo"/>

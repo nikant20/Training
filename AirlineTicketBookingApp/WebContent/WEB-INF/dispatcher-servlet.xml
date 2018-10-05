@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+	
+	<!-- Component Scan begins here -->
+	
+	<context:component-scan base-package="com.opteamix"></context:component-scan>
+
+	<mvc:annotation-driven/>
+	<tx:annotation-driven/>
+
+<!--     We should have our files in WEB-INF because web-inf restricts access to files and doesn't gives direct access --> 
+	
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/pages/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+   <!--  Add the Details Of DB -->
+	<bean id="dataSourceBean" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+        <property name="driverClassName" value="org.apache.derby.jdbc.ClientDriver"></property>  
+        <property name="url" value="jdbc:derby://localhost:1527/opteamix"></property>  
+        <property name="username" value="admin"></property>  
+        <property name="password" value="admin"></property>  
+    </bean> 
+    
+    <!-- Linking the bean class here to perform operations -->   
+    
+    <bean id="sf" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">  
+        <property name="dataSource" ref="dataSourceBean"></property>  
+        <property name="annotatedClasses">
+        	<list>
+        		<value>com.opteamix.beans.Employee</value>
+        	</list>
+        </property>  
+        <property name = "hibernateProperties">
+        	<props>
+        		<prop key = "hibernate.dialect">org.hibernate.dialect.DerbyTenSevenDialect</prop>
+				<prop key = "hibernate.hbm2ddl.auto">update</prop>
+        	</props>
+        </property>
+     </bean>
+	 
+	 <bean id = "hibernateTemplateBean" class = "org.springframework.orm.hibernate4.HibernateTemplate">
+     	<property name = "sessionFactory" ref = "sf"></property>
+     </bean>
+     
+<!-- 	<bean id = "" class = "" >
+     	<property name = "template" ref = "hibernateTemplateBean"></property>
+     </bean> -->
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">  
+        <property name="sessionFactory" ref="sf"></property>  
+    </bean> 
+
+	
+
+</beans>
