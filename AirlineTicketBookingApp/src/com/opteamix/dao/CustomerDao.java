@@ -11,5 +11,6 @@ public interface CustomerDao {
 	public Ticket search(int ticketId);
 	public String cancel(int ticketId);
 	public String reschedule(int ticketId);
+	public Flight query(Flight flight);
 }
 

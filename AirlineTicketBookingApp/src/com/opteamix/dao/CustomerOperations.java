@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.opteamix.model.Customer;
+import com.opteamix.model.Flight;
 import com.opteamix.model.Ticket;
 
 @Repository
@@ -14,6 +15,13 @@ public class CustomerOperations implements CustomerDao {
 	@Autowired
 	private HibernateTemplate hibernateTemplate;
 	
+	
+	@Override
+	public Flight query(Flight flight) {
+		Flight flightQuery = new Flight(flight.getSource(),flight.getDestination(),flight.getDate(), flight.getNoOfSeats());
+		
+		return flightQuery;
+	}
 	
 	@Transactional
 	@Override
@@ -66,6 +74,4 @@ public class CustomerOperations implements CustomerDao {
 		return "Details Updated";
 	}
 
-	
-	
 }

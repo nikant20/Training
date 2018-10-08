@@ -43,6 +43,7 @@
         <property name="annotatedClasses">
         	<list>
         		<value>com.opteamix.model.Customer</value>
+        		<value>com.opteamix.model.Flight</value>
         	</list>
         </property>  
         <property name = "hibernateProperties">

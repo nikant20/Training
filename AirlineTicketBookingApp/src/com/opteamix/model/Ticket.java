@@ -24,8 +24,6 @@ public class Ticket {
 	@Column
 	private Date dateofBooking;
 	@Column
-	private double fare;
-	@Column
 	private String ticketStatus;
 	
 	
@@ -44,13 +42,12 @@ public class Ticket {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Ticket(int ticketId, Date dateOfJourney, Date dateofBooking, double fare, String ticketStatus, Flight flight,
+	public Ticket(int ticketId, Date dateOfJourney, Date dateofBooking, String ticketStatus, Flight flight,
 			Customer customer) {
 		super();
 		this.ticketId = ticketId;
 		this.dateOfJourney = dateOfJourney;
 		this.dateofBooking = dateofBooking;
-		this.fare = fare;
 		this.ticketStatus = ticketStatus;
 		this.flight = flight;
 		this.customer = customer;
@@ -80,13 +77,6 @@ public class Ticket {
 		this.dateofBooking = dateofBooking;
 	}
 
-	public double getFare() {
-		return fare;
-	}
-
-	public void setFare(double fare) {
-		this.fare = fare;
-	}
 
 	public String getTicketStatus() {
 		return ticketStatus;
@@ -115,7 +105,7 @@ public class Ticket {
 	@Override
 	public String toString() {
 		return "Ticket [ticketId=" + ticketId + ", dateOfJourney=" + dateOfJourney + ", dateofBooking=" + dateofBooking
-				+ ", fare=" + fare + ", ticketStatus=" + ticketStatus + ", flight=" + flight + ", customer=" + customer
+				+ ", ticketStatus=" + ticketStatus + ", flight=" + flight + ", customer=" + customer
 				+ "]";
 	}
 	
