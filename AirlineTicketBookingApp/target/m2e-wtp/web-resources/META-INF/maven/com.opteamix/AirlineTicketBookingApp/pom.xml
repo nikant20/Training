@@ -10,13 +10,13 @@
 	<dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-webmvc</artifactId>
-	    <version>4.1.0.RELEASE</version>
+	    <version>4.3.18.RELEASE</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-orm</artifactId>
-		    <version>4.1.0.RELEASE</version>
+		    <version>4.3.18.RELEASE</version>
 		</dependency>
 	<!-- https://mvnrepository.com/artifact/org.apache.derby/derbyclient -->
 		<dependency>
@@ -45,7 +45,7 @@
 	    <version>2.9.0</version>
 	</dependency>
   </dependencies>
-  
+
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
