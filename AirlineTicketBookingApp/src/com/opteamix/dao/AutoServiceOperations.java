@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.opteamix.model.Ticket;
+import com.opteamix.service.CancelOperations;
+import com.opteamix.service.CancelTicket;
 
 @Repository
 public class AutoServiceOperations implements AutoServiceDao {
@@ -26,6 +28,14 @@ public class AutoServiceOperations implements AutoServiceDao {
 			status = "Sorry, Couldn't generate Ticket";
 		}
 		return status;
+	}
+
+	@Override
+	public String reschedule(int ticketId) {
+		CancelOperations cancel =  hibernateTemplate.get(CancelTicket.class, ticketId);
+		cancel.cancelTicket(ticketId);
+		
+		return "Ticket Cancelled";
 	}
 
 }

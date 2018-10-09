@@ -1,7 +1,16 @@
 package com.opteamix.controller;
 
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.datetime.DateFormatter;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +25,8 @@ import com.opteamix.dao.CustomerDao;
 import com.opteamix.model.Customer;
 import com.opteamix.model.Flight;
 import com.opteamix.model.Ticket;
+import com.opteamix.service.CancelOperations;
+import com.opteamix.service.FlightOperations;
 
 @RestController
 @CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST,RequestMethod.GET,RequestMethod.PUT,RequestMethod.DELETE})
@@ -27,6 +38,10 @@ public class WebServiceController {
 	private AdminDao adminOp;
 	@Autowired
 	private AutoServiceDao autoOp;
+	@Autowired
+	private FlightOperations flightOp;
+	@Autowired
+	private CancelOperations cancOp;
 	@RequestMapping(value="/store", method = RequestMethod.POST, produces= {MediaType.TEXT_PLAIN_VALUE}, consumes= {MediaType.APPLICATION_JSON_VALUE})
 	public String storeCustomer(@RequestBody Customer customer) {
 		String response = customerOp.store(customer);
@@ -52,9 +67,25 @@ public class WebServiceController {
 		return response;
 	}
 		
-	@RequestMapping(value="/query", method = RequestMethod.POST, produces = { MediaType.APPLICATION_JSON_VALUE})
-	public Flight query(@RequestBody Flight flight) {
-		return customerOp.query(flight);
+	@RequestMapping(value="/query/{source}/{destination}/{date}", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE})
+	public List<Flight> query(@PathVariable("source") String source, @PathVariable("destination") String destination,@PathVariable("date") String date) {
+		DateFormat dateFormat;
+		Date theDate = null;
+		dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			theDate = dateFormat.parse(date);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		List<Flight> flightDetails = flightOp.availability(source, destination, theDate);
+		return flightDetails;
+	}
+	
+	@RequestMapping(value="/cancelTicket/{id}", method = RequestMethod.GET, produces = {MediaType.TEXT_PLAIN_VALUE})
+	public String cancelTicket(@PathVariable("id") int ticketId) {
+		String response = cancOp.cancelTicket(ticketId);
+		return response;
 	}
 	
 }

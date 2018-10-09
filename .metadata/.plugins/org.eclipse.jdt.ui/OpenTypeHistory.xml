@@ -6,5 +6,6 @@
 <typeInfo handle="=spring-web-app/src&lt;com.opteamix.dao{EmployeeOperations.java[EmployeeOperations" modifiers="513" timestamp="1537953621797"/>
 <typeInfo handle="=spring-boot-app1/src\/main\/java&lt;com.opteamix.dao{StudentDAOInterface.java[StudentDAOInterface" modifiers="513" timestamp="1538114997413"/>
 <typeInfo handle="=spring-boot-app1/src\/main\/java&lt;com.opteamix.service{StudentServiceInterface.java[StudentServiceInterface" modifiers="513" timestamp="1538116035784"/>
-<typeInfo handle="=AirlineTicketBookingApp/src&lt;com.opteamix.dao{AdminDao.java[AdminDao" modifiers="513" timestamp="1538988478061"/>
+<typeInfo handle="=AirlineTicketBookingApp/src&lt;com.opteamix.dao{AdminDao.java[AdminDao" modifiers="513" timestamp="1538997544864"/>
+<typeInfo handle="=AirlineTicketBookingApp/C:\/Program Files\/Java\/jre1.8.0_112\/lib\/rt.jar&lt;javax.print(CancelablePrintJob.class[CancelablePrintJob" modifiers="1537" timestamp="1534856525127"/>
 </typeInfoHistroy>
