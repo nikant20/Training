@@ -81,7 +81,7 @@ public class Flight {
 		return flightNo;
 	}
 
-	public void setFlightNo(int flightNo) {
+	public void setFlightNo(int  flightNo) {
 		this.flightNo = flightNo;
 	}
 

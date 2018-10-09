@@ -1,7 +1,5 @@
 package com.opteamix.dao;
 
-import java.sql.Date;
-import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
@@ -17,6 +15,7 @@ public class AdminOperations implements AdminDao {
 
 	@Override
 	public Flight getFlightDetails(int flightNo) {
+		System.out.println(hibernateTemplate.get(Flight.class, flightNo));
 		return hibernateTemplate.get(Flight.class, flightNo);	
 	}
 	

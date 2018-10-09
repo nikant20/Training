@@ -5,6 +5,8 @@ import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -18,23 +20,24 @@ public class Ticket {
 	
 	@Id
 	@Column(length=6)
+	@GeneratedValue(strategy=GenerationType.TABLE)
 	private int ticketId;
 	@Column
 	private Date dateOfJourney;
 	@Column
 	private Date dateofBooking;
-	@Column
+	@Column(length= 10)
 	private String ticketStatus;
 	
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinTable(name="ticketDetails", joinColumns= {@JoinColumn(name="flightNo")}, 
-	inverseJoinColumns= {@JoinColumn(name="ticketId")})
+	@JoinTable(name="ticketDetails", joinColumns= {@JoinColumn(name="ticketId")}, 
+	inverseJoinColumns= {@JoinColumn(name="flightNo")})
 	private Flight flight;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinTable(name="ticketDetails", joinColumns= {@JoinColumn(name="email")},
-	inverseJoinColumns= {@JoinColumn(name="ticketId")})
+	@JoinTable(name="ticketDetailsTable", joinColumns= {@JoinColumn(name="ticketId")},
+	inverseJoinColumns= {@JoinColumn(name="email")})
 	private Customer customer;
 
 	public Ticket() {

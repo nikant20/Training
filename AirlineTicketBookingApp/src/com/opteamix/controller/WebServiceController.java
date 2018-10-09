@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.opteamix.dao.AdminDao;
+import com.opteamix.dao.AutoServiceDao;
 import com.opteamix.dao.CustomerDao;
 import com.opteamix.model.Customer;
 import com.opteamix.model.Flight;
+import com.opteamix.model.Ticket;
 
 @RestController
 @CrossOrigin(origins = {"*"}, methods = {RequestMethod.POST,RequestMethod.GET,RequestMethod.PUT,RequestMethod.DELETE})
@@ -23,7 +25,8 @@ public class WebServiceController {
 	private CustomerDao customerOp;
 	@Autowired
 	private AdminDao adminOp;
-	
+	@Autowired
+	private AutoServiceDao autoOp;
 	@RequestMapping(value="/store", method = RequestMethod.POST, produces= {MediaType.TEXT_PLAIN_VALUE}, consumes= {MediaType.APPLICATION_JSON_VALUE})
 	public String storeCustomer(@RequestBody Customer customer) {
 		String response = customerOp.store(customer);
@@ -41,6 +44,12 @@ public class WebServiceController {
 		int flightNumber = flightNo;
 		Flight flightDetails = adminOp.getFlightDetails(flightNumber);
 		return flightDetails;
+	}
+	
+	@RequestMapping(value="/generateTicket", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.TEXT_PLAIN_VALUE}) 
+	public String generateTicket(@RequestBody Ticket Ticket) {
+		String response = autoOp.generateTicket(Ticket);
+		return response;
 	}
 		
 	@RequestMapping(value="/query", method = RequestMethod.POST, produces = { MediaType.APPLICATION_JSON_VALUE})
