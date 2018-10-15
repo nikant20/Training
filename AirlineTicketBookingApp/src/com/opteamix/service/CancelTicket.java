@@ -15,6 +15,7 @@ public class CancelTicket implements CancelOperations {
 	@Autowired
 	HibernateTemplate hibernateTemplate;
 	
+	//Cancelled ticket code
 	@Override
 	public String cancelTicket(int ticketId) {
 		Ticket ticketDetails = hibernateTemplate.get(Ticket.class, ticketId);
@@ -32,7 +33,8 @@ public class CancelTicket implements CancelOperations {
 		
 		return "Ticket Cancelled and Amount refunded is: "+fare;
 	}
-
+	
+	//Method to find the difference in dates
 	private int dateDifference(Date datejourney) {
 		
 		return (int) ChronoUnit.DAYS.between(datejourney.toInstant(), new Date().toInstant());

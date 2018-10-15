@@ -1,0 +1,29 @@
+<div>  
+    <table  class="table table-bordered table-hover table-sm">
+      <thead class="thead-dark">
+      <tr>
+        <th>Flight No.</th>
+        <th>No. Of Seats</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Fare</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+      <tbody>
+      <tr *ngFor="let i of avr">
+        <td>{{i.flightNo}}</td>
+        <td>{{i.noOfSeats}}</td>
+        <td>{{i.source}}</td>
+        <td>{{i.destination}}</td>
+        <td>{{i.departureTime}}</td>
+        <td>{{i.arrivalTime}}</td>
+        <td>{{i.fare}}</td>
+        <td>{{i.date}}</td>
+      </tr>
+    </tbody>
+    </table>
+  
+  </div>

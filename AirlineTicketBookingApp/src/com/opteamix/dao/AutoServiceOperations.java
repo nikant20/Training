@@ -11,10 +11,12 @@ import com.opteamix.service.CancelTicket;
 
 @Repository
 public class AutoServiceOperations implements AutoServiceDao {
-    
+    //Automatically creates object of Hibernate Template
 	@Autowired
 	HibernateTemplate hibernateTemplate;
 	
+	
+	//generates ticket
 	@Transactional
 	@Override
 	public String generateTicket(Ticket ticket) {
@@ -29,7 +31,8 @@ public class AutoServiceOperations implements AutoServiceDao {
 		}
 		return status;
 	}
-
+	
+	//Reschedule Ticket
 	@Override
 	public String reschedule(int ticketId) {
 		CancelOperations cancel =  hibernateTemplate.get(CancelTicket.class, ticketId);

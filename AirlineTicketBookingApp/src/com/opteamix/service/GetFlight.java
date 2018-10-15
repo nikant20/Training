@@ -17,6 +17,7 @@ public class GetFlight implements FlightOperations{
 	@Autowired
 	HibernateTemplate hibernateTemplate;
 	
+	//checking flight availability
 	@Override
 	public List<Flight> availability(String source, String destination, Date date) {
 		String hql = "select f "

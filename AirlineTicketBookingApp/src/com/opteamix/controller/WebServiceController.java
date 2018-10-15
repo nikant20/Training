@@ -42,18 +42,22 @@ public class WebServiceController {
 	private FlightOperations flightOp;
 	@Autowired
 	private CancelOperations cancOp;
+	
+	//Store Method
 	@RequestMapping(value="/store", method = RequestMethod.POST, produces= {MediaType.TEXT_PLAIN_VALUE}, consumes= {MediaType.APPLICATION_JSON_VALUE})
 	public String storeCustomer(@RequestBody Customer customer) {
 		String response = customerOp.store(customer);
 		return response;
 	}
 	
+	//admin store method
 	@RequestMapping(value="/flightDataAdminStore", method = RequestMethod.POST, produces = {MediaType.TEXT_PLAIN_VALUE}, consumes = {MediaType.APPLICATION_JSON_VALUE})
 	public String storeFlightDetails(@RequestBody Flight flight) {
 		String response = adminOp.setFlightDetails(flight);
 		return response;
 	}
 	
+	//flight details
 	@RequestMapping(value="/flightDataAdminGetDetails/{flightNo}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
 	public Flight getFlightDetails(@PathVariable("flightNo") int flightNo) {
 		int flightNumber = flightNo;
@@ -61,12 +65,14 @@ public class WebServiceController {
 		return flightDetails;
 	}
 	
+	//Generate Ticket
 	@RequestMapping(value="/generateTicket", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.TEXT_PLAIN_VALUE}) 
 	public String generateTicket(@RequestBody Ticket Ticket) {
 		String response = autoOp.generateTicket(Ticket);
 		return response;
 	}
 		
+	//Flight Query
 	@RequestMapping(value="/query/{source}/{destination}/{date}", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE})
 	public List<Flight> query(@PathVariable("source") String source, @PathVariable("destination") String destination,@PathVariable("date") String date) {
 		DateFormat dateFormat;
@@ -81,7 +87,7 @@ public class WebServiceController {
 		List<Flight> flightDetails = flightOp.availability(source, destination, theDate);
 		return flightDetails;
 	}
-	
+	//Cancel Ticket
 	@RequestMapping(value="/cancelTicket/{id}", method = RequestMethod.GET, produces = {MediaType.TEXT_PLAIN_VALUE})
 	public String cancelTicket(@PathVariable("id") int ticketId) {
 		String response = cancOp.cancelTicket(ticketId);
